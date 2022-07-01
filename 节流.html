@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 data-name='luofoshun'>woziana</h1>
+    <script src="C:\Users\Lenovo\Desktop\尚品汇\app\node_modules\_lodash@4.17.21@lodash\lodash.js"></script>
+    <p>我是计算器: <span>0</span></p>
+    <button>+1</button>
+    <script>
+        let span = document.querySelector('span');
+        let input = document.querySelector('input');
+        let h1 = document.querySelector('h1');
+        let button = document.querySelector('button')
+        let count = 0;
+        button.onclick = _.throttle(function () {
+            count++;
+            span.innerHTML = count
+            console.log(h1.dataset.name)
+            console.log()
+        }, 1000)
+
+    </script>
+</body>
+
+</html>
